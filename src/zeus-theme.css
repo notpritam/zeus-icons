@@ -1,0 +1,89 @@
+/* MyZeus UI chrome and typography for the icon browser (R-26). Loaded after library.css. */
+:root { font-size: 14px; }
+body { background: var(--z-paper); color: var(--z-ink); }
+:focus-visible { outline-color: var(--z-accent); }
+::selection { background: #cbdcff; color: #172957; }
+
+/* Site header: sticky, translucent, same nav as myzeusui.com. */
+.zeus-bar { position: sticky; top: 0; z-index: 40; background: color-mix(in srgb, var(--z-paper) 92%, transparent); -webkit-backdrop-filter: saturate(1.6) blur(14px); backdrop-filter: saturate(1.6) blur(14px); border-bottom: 1px solid transparent; transition: border-color 200ms ease, box-shadow 200ms ease; }
+.zeus-bar[data-scrolled] { border-bottom-color: var(--z-line); box-shadow: 0 8px 24px -20px rgb(0 0 0 / 0.35); }
+.zeus-header { max-width: 1392px; margin: 0 auto; padding: 16px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; }
+.zeus-header-start, .zeus-header-end { display: flex; align-items: center; }
+.zeus-header-start { gap: 32px; }
+.zeus-header-end { gap: 12px; }
+.zeus-brand { display: inline-flex; align-items: center; gap: 8px; font-size: 18px; font-weight: 600; letter-spacing: -0.02em; color: var(--z-ink); }
+.zeus-brand:hover { text-decoration: none; }
+.zeus-brand svg { color: var(--z-accent); }
+.zeus-nav { display: flex; align-items: center; gap: 24px; font-size: 14px; color: var(--z-muted); }
+.zeus-nav a, .zeus-mobile-nav a { transition: color 160ms; }
+.zeus-nav a:hover, .zeus-mobile-nav a:hover { color: var(--z-ink); text-decoration: none; }
+.zeus-nav a[aria-current="page"], .zeus-mobile-nav a[aria-current="page"] { color: var(--z-ink); font-weight: 500; }
+.zeus-search-trigger { display: inline-flex; align-items: center; gap: 8px; height: 36px; padding: 0 8px 0 10px; border: 1px solid var(--z-line); border-radius: 10px; background: var(--z-paper); color: var(--z-muted); font-size: 13px; transition: background 160ms, color 160ms; }
+.zeus-search-trigger:hover { background: var(--z-surface); color: var(--z-ink); }
+.zeus-search-trigger kbd { padding: 0 4px; border: 1px solid var(--z-line); border-radius: 4px; font: 10px/17px ui-monospace, monospace; }
+.zeus-theme { display: inline-grid; place-items: center; width: 36px; height: 36px; border: 0; border-radius: 10px; background: transparent; color: var(--z-soft); }
+.zeus-theme:hover { background: var(--z-surface); color: var(--z-ink); }
+.zeus-header-end .zeus-packages, .zeus-header-end .zeus-download { height: 36px; border-radius: 10px; font-size: 13px; }
+.zeus-mobile-nav { display: none; }
+
+/* Zeus surfaces for the browser body. */
+.library-shell { background: var(--z-paper); }
+.library-discovery { scroll-margin-top: 72px; background: var(--z-surface-2); border-color: var(--z-line); }
+.library-search input { border-radius: 14px; border-color: var(--z-line); background: var(--z-paper); color: var(--z-ink); font-size: 16px; }
+.library-search input:focus-visible { border-color: color-mix(in srgb, var(--z-accent) 60%, var(--z-line)); box-shadow: 0 0 0 4px color-mix(in srgb, var(--z-accent) 14%, transparent); outline: none; }
+.library-search > svg { color: var(--z-muted); }
+.library-style-bar button { border-radius: 999px; font-size: 12px; }
+.library-style-bar button[aria-pressed=true], .library-categories button[aria-pressed=true] { background: var(--z-ink); color: var(--z-paper); box-shadow: none; }
+.library-style-group small { color: inherit; opacity: 0.7; }
+.library-results-heading h1 { font-size: 30px; font-weight: 500; letter-spacing: -0.025em; }
+.library-results-heading p { font-size: 13px; color: var(--z-muted); }
+.library-card { border-radius: 12px; background: var(--z-surface-2); border-color: var(--z-line); }
+.library-card:hover { background: var(--z-surface); border-color: color-mix(in srgb, var(--z-ink) 25%, var(--z-line)); }
+.library-card > span { font-size: 12px; color: var(--z-soft); }
+.library-card > small { font-size: 10px; color: var(--z-muted); }
+.library-categories button { font-size: 13px; border-radius: 8px; }
+.library-categories button > span:last-child { font-size: 11px; }
+.library-origin-line, .library-pagination, .library-footer { font-size: 12px; }
+
+/* The artwork is black SVG; in dark mode invert it (and keep transparency). */
+.dark .library-card img, .dark .library-stage img, .dark .library-detail-styles img, .dark .library-grid img { filter: invert(1) hue-rotate(180deg); }
+.dark .library-skeleton { background: var(--z-surface); }
+
+/* Phones: compact header with a scrolling link row, and a floating search button. */
+.zeus-search-fab { display: none; }
+@media (max-width: 1100px) { .zeus-nav { gap: 18px; } }
+@media (max-width: 900px) {
+  .zeus-nav, .zeus-search-trigger > span, .zeus-search-trigger > kbd { display: none; }
+  .zeus-search-trigger { width: 36px; padding: 0; justify-content: center; }
+  .zeus-mobile-nav { display: flex; width: 100%; gap: 20px; overflow-x: auto; padding: 10px 24px 12px 0; border-top: 1px solid var(--z-line); font-size: 14px; color: var(--z-muted); white-space: nowrap; scrollbar-width: none; mask-image: linear-gradient(90deg, #000 calc(100% - 28px), transparent); }
+  .zeus-mobile-nav::-webkit-scrollbar { display: none; }
+  .zeus-mobile-nav a { flex: none; padding-block: 4px; }
+}
+@media (max-width: 640px) {
+  .zeus-header { padding: 10px 16px 0; row-gap: 10px; }
+  .zeus-header-end { gap: 6px; }
+  .zeus-download > span { display: none; }
+  .zeus-header-end .zeus-download { width: 36px; padding: 0; justify-content: center; }
+  .library-discovery { scroll-margin-top: 112px; }
+}
+@media (max-width: 767px) {
+  .zeus-search-fab { position: fixed; right: max(16px, env(safe-area-inset-right)); bottom: max(16px, env(safe-area-inset-bottom)); z-index: 60; display: inline-grid; place-items: center; width: 52px; height: 52px; border: 0; border-radius: 999px; background: #2855e8; color: #fff; box-shadow: 0 12px 28px -10px rgb(40 85 232 / 0.65), 0 2px 6px rgb(0 0 0 / 0.18); transition: transform 200ms cubic-bezier(0.2, 0.8, 0.2, 1), opacity 200ms ease; animation: zeus-fab-in 320ms cubic-bezier(0.2, 0.8, 0.2, 1) both; -webkit-tap-highlight-color: transparent; }
+  .zeus-search-fab:active { transform: scale(0.94); }
+  .zeus-search-fab[data-hidden] { opacity: 0; transform: scale(0.6); pointer-events: none; }
+  .dark .zeus-search-fab { background: #a0baff; color: #122044; }
+}
+@keyframes zeus-fab-in { from { opacity: 0; transform: scale(0.6); } }
+@media (prefers-reduced-motion: reduce) { .zeus-search-fab { animation: none; transition: none; } }
+/* The categories rail sticks below the site header. */
+.library-categories { top: 88px; max-height: calc(100dvh - 104px); }
+/* Dialogs sit above the sticky site header, over a neutral scrim. */
+.modal-overlay { z-index: 80; background: rgb(9 12 20 / 0.42); }
+.modal { z-index: 81; box-shadow: 0 20px 80px rgb(0 0 0 / 0.22); }
+.dark .modal { box-shadow: 0 0 0 1px var(--z-line), 0 24px 80px rgb(0 0 0 / 0.6); }
+.icon-control-menu, .icon-color-popover { box-shadow: 0 8px 30px rgb(0 0 0 / 0.12); }
+.toast { z-index: 90; }
+/* Phones keep the compact cards so the first page of icons stays within lazy-load reach. */
+@media (max-width: 700px) {
+  .library-card > span { font-size: 11px; margin-top: 8px; }
+  .library-card > small { font-size: 9px; margin-top: 3px; }
+}

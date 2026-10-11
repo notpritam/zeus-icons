@@ -1,4 +1,4 @@
-import { useDeferredValue, useEffect, useMemo, useRef, useState } from 'react';
+import { useCallback, useDeferredValue, useEffect, useMemo, useRef, useState } from 'react';
 import { HugeiconsIcon } from '@hugeicons/react';
 import { Search01Icon, Download01Icon, Menu01Icon } from '@hugeicons/core-free-icons';
 import type { Catalog, IconEntry } from './types';
@@ -10,8 +10,10 @@ import { Input } from './components/ui/input';
 import { Modal } from './components/Controls';
 import IconDetail from './components/IconDetail';
 import './library.css';
+import './zeus-theme.css';
 import { assetUrl } from './lib/asset-url';
 import { PackagesDialog } from './components/PackagesDialog';
+import { ZeusHeader, ZeusSearchFab } from './components/ZeusHeader';
 
 const PAGE_SIZE = 80;
 const initial = new URLSearchParams(window.location.search);
@@ -42,6 +44,10 @@ export default function LibraryBrowser() {
   const [aboutOpen, setAboutOpen] = useState(false);
   const [packagesOpen, setPackagesOpen] = useState(false);
   const search = useRef<HTMLInputElement>(null);
+  const focusSearch = useCallback(() => {
+    document.querySelector('.library-discovery')?.scrollIntoView({ block: 'start', behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+    search.current?.focus({ preventScroll: true });
+  }, []);
   useEffect(() => {
     const abort = new AbortController(); setError('');
     void fetch(assetUrl('/catalog.json'), { signal: abort.signal }).then(async response => {
@@ -110,7 +116,7 @@ export default function LibraryBrowser() {
   function chooseStyle(id: IconStyle | 'all') { setStyle(id); setPage(0); }
   function movePage(delta: number) { setPage(safePage + delta); document.querySelector('.library-results')?.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
   return <div className="library-shell">
-    <header className="library-header"><a className="brand" href={assetUrl("/")}><span className="brand-mark" aria-hidden="true"><i /><i /><i /><i /></span>Zeus Icons</a><nav aria-label="Main navigation"><a className="library-current" href={assetUrl("/")}>Icons</a><button className="library-packages-link" onClick={() => setPackagesOpen(true)}>Packages</button><button onClick={() => setAboutOpen(true)}>About & licence</button></nav><Button size="sm" asChild><a href={assetUrl("/free-icons.zip")} download aria-label="Download free icons" title="6,025 Stroke Rounded SVGs with MIT attribution"><HugeiconsIcon icon={Download01Icon} /><span>Download free icons</span></a></Button></header>
+    <ZeusHeader onSearch={focusSearch} actions={<><Button variant="outline" size="sm" className="zeus-packages" onClick={() => setPackagesOpen(true)}>Packages</Button><Button size="sm" className="zeus-download" asChild><a href={assetUrl("/free-icons.zip")} download aria-label="Download free icons" title="6,025 Stroke Rounded SVGs with MIT attribution"><HugeiconsIcon icon={Download01Icon} /><span>Download free icons</span></a></Button></>} />
     <section className="library-discovery" aria-label="Find icons"><div className="library-search"><HugeiconsIcon icon={Search01Icon} size={22} /><Input ref={search} aria-label="Search collection" placeholder={`Search ${baseCount.toLocaleString()} icons…`} value={query} onChange={event => { setQuery(event.target.value); setPage(0); }} /><kbd>/</kbd></div><div className="library-style-bar" aria-label="Filter by style"><Button variant="ghost" aria-pressed={style === 'all'} onClick={() => chooseStyle('all')}>All</Button>{['Rounded', 'Standard', 'Sharp'].map(group => <div className="library-style-group" role="group" aria-label={group} key={group}><span>{group}</span>{ICON_STYLES.filter(item => item.family === group).map(item => <Button variant="ghost" key={item.id} aria-pressed={style === item.id} onClick={() => chooseStyle(item.id)}>{item.name}{item.id === FREE_STYLE && <small>Free</small>}</Button>)}</div>)}</div></section>
     <div className="library-body"><main className="library-results"><div className="library-results-heading"><div><h1>{activeCategory?.name ?? (currentStyle ? `${currentStyle.label} icons` : builtOnly ? 'Traced SVGs' : 'All icons')}</h1><p>{catalog ? `${filtered.length.toLocaleString()} icons` : 'Loading collection…'}<span>{builtOnly ? 'Built from reference images' : style === 'all' || style === FREE_STYLE ? 'Stroke Rounded · Free' : 'Pro styles'}</span></p></div><div className="library-results-actions">{traces && <Button variant="outline" size="sm" aria-pressed={builtOnly} onClick={() => { setBuiltOnly(value => !value); setPage(0); setStyle('all'); }}>{builtOnly ? 'All icons' : `Traced SVGs (${traces.count})`}</Button>}<Button variant="outline" size="sm" className="library-category-trigger" onClick={() => setCategoriesOpen(true)}><HugeiconsIcon icon={Menu01Icon} />Categories</Button>{currentStyle?.id === FREE_STYLE && <Button variant="outline" size="sm" asChild><a href={assetUrl("/free-icons.zip")} download><HugeiconsIcon icon={Download01Icon} />Free pack</a></Button>}</div></div><p className="library-origin-line">{catalog?.icons.length.toLocaleString() ?? '6,025'} free SVGs{traces ? ` · ${traces.count.toLocaleString()} image traces built` : ''}. <button onClick={() => setAboutOpen(true)}>About this collection</button></p>
       {error ? <div className="empty-state" role="alert"><strong>{error}</strong><Button variant="outline" onClick={() => setAttempt(value => value + 1)}>Retry collection</Button></div> : !catalog ? <div className="library-grid" aria-label="Loading icons">{Array.from({ length: 32 }, (_, index) => <div className="library-skeleton" key={index} />)}</div> : !visible.length ? <div className="empty-state"><strong>No matching icons</strong><p>Try another name, style or category.</p><Button variant="outline" onClick={() => { setQuery(''); setCategory('all'); setStyle('all'); setBuiltOnly(false); setPage(0); }}>Reset filters</Button></div> : <div className="library-grid">{visible.map(({ icon, style: item }) => <button className="library-card" key={`${icon.id}:${item.id}`} aria-label={`Preview ${icon.name}, ${item.label}`} onClick={() => { setSelected(icon.id); setSelectedStyle(item.id); }}><div><IconThumbnail key={(findTrace(traces, icon, item.id) ? traceSvgUrl(findTrace(traces, icon, item.id)!) : previewUrl(icon, item.id))} url={(findTrace(traces, icon, item.id) ? traceSvgUrl(findTrace(traces, icon, item.id)!) : previewUrl(icon, item.id))} size={36} /></div><span title={icon.name}>{icon.name}</span><small>{item.label}{item.id !== FREE_STYLE && (findTrace(traces, icon, item.id) ? ' · Traced' : ' · Reference')}</small></button>)}</div>}
@@ -118,6 +124,7 @@ export default function LibraryBrowser() {
     </main></div><footer className="library-footer"><a href="https://myzeusui.com/">Zeus Icons · MyZeus UI</a><a href="https://github.com/notpritam/zeus-icons">GitHub</a><span>{catalog?.icons.length.toLocaleString() ?? '6,025'} free SVGs · 10 original style names</span><a href={assetUrl("/LICENSE-hugeicons.txt")} target="_blank" rel="noreferrer">Attribution</a></footer>
     {current && <IconDetail key={current.id} icon={current} style={selectedStyle} onStyle={setSelectedStyle} traces={traces} onClose={() => setSelected('')} />}
     <PackagesDialog open={packagesOpen} onOpenChange={setPackagesOpen} />
+    <ZeusSearchFab onSearch={focusSearch} />
     <Modal title="Categories" description="Browse the collection by subject." open={categoriesOpen} onOpenChange={setCategoriesOpen}><div className="library-category-dialog"><Button variant="ghost" onClick={() => chooseCategory('all')}>All icons</Button>{catalog?.categories.map(item => <Button variant="ghost" key={item.id} onClick={() => chooseCategory(item.id)}>{item.name}<span>{(builtOnly || paidBrowsing ? categoryCounts.get(item.id) ?? 0 : item.actualCount).toLocaleString()}</span></Button>)}</div></Modal>
     <Modal title="About & licence" description={`${baseCount.toLocaleString()} free Stroke Rounded SVGs.`} open={aboutOpen} onOpenChange={setAboutOpen}><div className="library-about"><p>The free pack contains the original <strong>@hugeicons/core-free-icons {catalog?.packageVersion}</strong> pack, under the MIT licence. Downloads retain its attribution.</p><p>Rounded, Standard and Sharp use Hugeicons’ original style names. The other nine styles use public images from Hugeicons. Available image traces are labelled and have their own source notices; they are separate from the MIT free pack and are approximations, not original Pro SVG files.</p><div><a href={assetUrl("/LICENSE-hugeicons.txt")} target="_blank" rel="noreferrer">Hugeicons MIT licence ↗</a><a href="https://hugeicons.com/styles" target="_blank" rel="noreferrer">Original styles ↗</a></div></div></Modal>
   </div>;

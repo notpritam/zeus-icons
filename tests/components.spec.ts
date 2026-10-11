@@ -7,14 +7,14 @@ test('React usage is short, complete framework components copy and download sepa
   const code = page.getByTestId('component-usage');
   await expect(code).toContainText("zeus-icons/solid-rounded/Home01SolidRoundedIcon");
   await expect(code).not.toContainText('<path');
-  await expect(page.getByTestId('package-install')).toHaveText('npm install ./zeus-icons-0.1.0.tgz');
+  await expect(page.getByTestId('package-install')).toHaveText('npm install https://github.com/notpritam/zeus-icons/releases/download/v0.1.0/zeus-icons-0.1.0.tgz');
   await expect(page.getByTestId('component-source')).not.toBeVisible();
   await page.getByRole('button', { name: 'Copy usage', exact: true }).click();
   await expect(page.getByText('Usage copied.', { exact: true })).toBeVisible();
   expect(await page.evaluate(() => navigator.clipboard.readText())).toContain("zeus-icons/solid-rounded/Home01SolidRoundedIcon");
   await page.getByRole('button', { name: 'Copy install', exact: true }).click();
   await expect(page.getByText('Install command copied.', { exact: true })).toBeVisible();
-  expect(await page.evaluate(() => navigator.clipboard.readText())).toBe('npm install ./zeus-icons-0.1.0.tgz');
+  expect(await page.evaluate(() => navigator.clipboard.readText())).toBe('npm install https://github.com/notpritam/zeus-icons/releases/download/v0.1.0/zeus-icons-0.1.0.tgz');
   await page.getByText('Component source', { exact: true }).click();
   await page.getByRole('button', { name: 'Copy component', exact: true }).click();
   await expect(page.getByText('React component copied.', { exact: true })).toBeVisible();

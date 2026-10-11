@@ -1,49 +1,40 @@
-# Package launch
+# Releasing Zeus Icons
 
-React is the primary npm package. Every icon has a named, typed component and a
-per-icon import. Flutter is also available as a local path package; other
-frameworks currently use the complete components downloaded from the site.
+The browser is hosted at https://myzeusui.com/icons/. Source vectors are pinned to
+`notpritam/zeus-icons` tags; installable packages and the small browser export are
+published as GitHub Release assets. React uses `zeus-icons`, Flutter `zeus_icons`.
 
 ## Build and validate
 
-1. Finish the desired catalogue snapshot and run `npm run build:packages`.
-2. Install the generated React tarball into the isolated consumer described in
-   scripts/README.md, then run `npm run audit:packages` and
-   `npm run test:components`. Run the Flutter fixture when Flutter output changes.
-3. Run `npm test`, `npm run build` and the active browser suite.
-4. Run `npm run release:prepare -- @your-account/free-icons-react` with a scope
-   owned by the intended publisher. Omitting the argument retains the current
-   development name, `zeus-icons`; ownership of that scope is not established.
+1. Run `npm run build:packages`, `npm test` and `npm run build`.
+2. Install the React tarball into the isolated consumer described in
+   `scripts/README.md`. Run `npm run audit:packages` and `npm run test:components`.
+   Validate the Flutter fixture with a Flutter SDK when widget output changes.
+3. Run the browser suite with one worker and `npm run build:site`.
+4. Make SVG and browser archives, plus SHA256SUMS. Exclude scratch files and
+   reference rasters. Preserve source attribution and per-icon provenance.
+5. Tag the verified public source, create the matching GitHub Release and upload
+   the exact checked archives. Confirm public downloads match their checksums.
+6. Install the public React release URL in a clean consumer and validate the
+   per-icon import, TypeScript and rendering before announcing it ready.
 
-The prepare command checks the source archive checksum, extracts a fresh release
-directory, enables public package metadata in that copy only, produces a tarball,
-and runs `npm publish --dry-run`. It never publishes. The reviewed tarball path,
-SHA-256, identity and result are recorded in `.local/releases/latest.json`.
-The downloaded development package and live site are not altered.
+MyZeus UI pins the browser release URL and checksum in
+`tools/zeus-icons-release.json`. Update that pin, build the static site and check
+its export before deploying. Navigation into `/icons/` uses ordinary anchors.
+Source SVG URLs use the immutable release tag, not the changing main branch.
 
-## Launch
+## Registry publication is separate
 
-The registry login is not configured on omni as of 2026-10-10 (`ENEEDAUTH`). Use
-`npm login --registry https://registry.npmjs.org/`, then confirm the account or
-organization owns the chosen scope. Preparing a name is not a claim that it is
-available or that the user owns it.
+The current package is installed from GitHub Releases. It is not published to
+npm or pub.dev. `npm run release:prepare -- zeus-icons` prepares a separate npm
+candidate and runs `npm publish --dry-run`; it never publishes. Registry launch
+requires publisher authentication, name ownership and a clean registry install.
+Never switch the site's command to `npm install zeus-icons` before that succeeds.
+Flutter's archive uses `publish_to: none` and is installed as a local dependency.
 
-Install and smoke-test the **prepared tarball**, then publish that exact artifact
-with `npm publish /absolute/path/to/reviewed.tgz --access public`. A successful
-dry-run is not a registry release. Verify a clean registry install, then switch
-the site's installation instructions to `npm install <published-name>` and update
-the import snippets. Keep the tarball path instructions until publication succeeds.
+## Artwork
 
-The Flutter development package uses `publish_to: none`. A pub.dev release needs
-an owned/available package name, publisher login, package validation and a clean
-consumer install before switching the site to a hosted dependency.
-
-## Included artwork
-
-The current artifacts contain 60,331 actual icons: 6,025 original free icons and
-54,306 image-derived variants. Nine references were unavailable; review metadata
-for fitted geometry remains in `SOURCES.json`. Keep source notices, hashes, free
-MIT attribution and generated artwork provenance in every release. Do not label
-the generated collection as original Hugeicons Pro SVGs or relicense it by
-changing the package metadata. Package preparation does not change repository
-visibility or publish any source repository.
+The release contains 60,331 actual icons: 6,025 original MIT free icons and 54,306
+image-derived variants. Nine references were unavailable. Generated artwork is
+not original Hugeicons Pro SVG source and is not covered by the application's
+MIT license. Keep source notices and review metadata in every distribution.

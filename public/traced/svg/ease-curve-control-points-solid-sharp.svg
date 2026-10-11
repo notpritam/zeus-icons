@@ -1,0 +1,5 @@
+<!-- Generated image trace; not the original Hugeicons Pro SVG.
+Source: https://hugeicons.com/icon/ease-curve-control-points?style=solid-sharp
+Reference artwork: Hugeicons. Not covered by the application's MIT license.
+Algorithm: geometry-first-v4; method: fitted-contours; source 512x512; alpha overlap 98.887%. -->
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="currentColor" opacity="1"><path d="M7.82843 5L10 5L10 3L7.82843 3A3 3 0 1 0 7.82843 5Z"/><path d="M12 3V5H14V3Z"/><path d="M19.97109 3.05391C16.25391 3.44203 14.24344 5.38078 11.04656 11.66062C8.18437 17.28281 6.39562 18.9825 3.33984 18.98438L3 18.98438L3 19.99219L3 21L3.24656 21C5.39531 21 7.59094 20.01891 9.18844 18.34594C10.41797 17.05734 11.12437 15.92859 12.98203 12.28172C15.81281 6.72516 17.61891 5.01563 20.65687 5.01563L21 5.01563L21 4.00781L21 3L20.68359 3.00609C20.50969 3.00984 20.18906 3.03094 19.97109 3.05391Z"/><path d="M16.17157 19L14 19L14 21L16.17157 21A3 3 0 1 0 16.17157 19Z"/><path d="M10 19V21H12V19Z"/></g></svg>

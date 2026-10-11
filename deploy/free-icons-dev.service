@@ -1,0 +1,17 @@
+[Unit]
+Description=Free Icons workbench (built dev preview)
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/pritam/personal/hq/products/free-icons/code/app
+ExecStartPre=/usr/bin/npm run build
+ExecStart=/usr/bin/npm run preview -- --port 8937 --strictPort
+ExecStartPost=/usr/bin/npm run audit:served
+TimeoutStartSec=300
+Restart=on-failure
+RestartSec=3
+Environment=NODE_ENV=production
+
+[Install]
+WantedBy=default.target

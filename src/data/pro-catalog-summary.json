@@ -1,0 +1,20 @@
+{
+  "batch": "pro-all",
+  "capturedAt": "2026-10-10T05:45:23.286Z",
+  "unit": "paid style variant",
+  "excludedStyle": "stroke-rounded",
+  "websiteTotal": 60350,
+  "count": 54315,
+  "uniqueNames": 6035,
+  "styles": {
+    "solid-sharp": 6035,
+    "stroke-sharp": 6035,
+    "bulk-rounded": 6035,
+    "solid-rounded": 6035,
+    "twotone-rounded": 6035,
+    "duotone-rounded": 6035,
+    "duotone-standard": 6035,
+    "solid-standard": 6035,
+    "stroke-standard": 6035
+  }
+}

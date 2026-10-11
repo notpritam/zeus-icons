@@ -1,0 +1,29 @@
+node_modules/
+dist/
+.local/
+*.tsbuildinfo
+playwright-report/
+test-results/
+
+.cache/
+public/variants/
+public/downloads/
+public/variants-manifest.json
+public/library.json
+public/LICENSE-free-icons.txt
+node_modules
+
+# Private generated image traces and source rasters; separate from MIT assets.
+public/traced/
+
+public/packages/
+
+# Public release includes vectors and compressed metadata, not reference rasters.
+!public/traced/
+public/traced/*
+!public/traced/svg/
+!public/traced/catalog.json
+!public/traced/catalog-v2.json
+!public/traced/catalog-v3.json
+!public/traced/progress.json
+!public/traced/manifest.json.gz

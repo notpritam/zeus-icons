@@ -1,0 +1,13 @@
+[Unit]
+Description=Generate and verify the full public Pro icon reference inventory
+StartLimitIntervalSec=86400
+StartLimitBurst=3
+
+[Service]
+Type=simple
+WorkingDirectory=/home/pritam/personal/hq/products/free-icons/code/app
+ExecStart=/usr/bin/node scripts/trace-pro-batch.mjs .cache/pro-catalog/catalog.json --publish
+Environment=TRACE_WORKERS=32
+Environment=UV_THREADPOOL_SIZE=12
+Restart=on-failure
+RestartSec=60

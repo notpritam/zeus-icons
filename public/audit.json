@@ -1,0 +1,747 @@
+{
+  "generatedAt": "2026-10-07T17:06:59.822Z",
+  "status": "complete-package-with-upstream-artwork-differences",
+  "packageVersion": "4.3.5",
+  "style": "stroke-rounded",
+  "websiteEntryCount": 6035,
+  "packageIconCount": 6025,
+  "exportedIconCount": 6025,
+  "websiteAliasCount": 10,
+  "categoryCount": 59,
+  "missingFromPackage": [
+    "comment add-03: The spaced and hyphenated source names have different free preview rasters. They show the same concept, but exact artwork equivalence is unverified.",
+    "comment block-03: The spaced and hyphenated source names have different free preview rasters. They show the same concept, but exact artwork equivalence is unverified.",
+    "comment remove-03: The spaced and hyphenated source names have different free preview rasters. They show the same concept, but exact artwork equivalence is unverified.",
+    "c++ / cpp: The C++ and Cpp free preview rasters differ. The package collapses both names into one module; exact artwork equivalence is unverified.",
+    "fingerprint-scan: The free website fingerprint-scan preview uses different fingerprint ridges from finger-print-scan. The package aliases both exports to FingerPrintScanIcon.",
+    "foursquare: The free website foursquare preview is the Foursquare logo; four-square and the package module show a boxed numeral 4.",
+    "fullscreen: The free website fullscreen preview uses different corner geometry from full-screen. The package aliases both exports to FullScreenIcon.",
+    "re / re:: The Re and Re: free preview rasters differ. The package collapses both names into one module; exact artwork equivalence is unverified.",
+    "trademark: The free website trademark preview is an uncircled TM; trade-mark and the package module show a circled TM."
+  ],
+  "upstreamAliasReview": {
+    "reviewedAt": "2026-10-07T17:06:10.021Z",
+    "packageVersion": "4.3.5",
+    "style": "stroke-rounded",
+    "method": "Visual inspection of all 20 free CDN previews plus byte hashes. Different raster bytes alone do not prove different SVG geometry; those cases remain explicitly unverified. No Pro artwork fetched or copied.",
+    "groups": [
+      {
+        "exportName": "CommentAdd03Icon",
+        "status": "unverified-raster-difference",
+        "affectedSource": "comment add-03",
+        "reason": "The spaced and hyphenated source names have different free preview rasters. They show the same concept, but exact artwork equivalence is unverified.",
+        "previews": [
+          {
+            "sourceName": "comment add-03",
+            "sourceUrl": "https://hugeicons.com/icon/comment%20add-03?style=stroke-rounded",
+            "previewUrl": "https://ico.hugeicons.com/comment%20add-03-stroke-rounded@3x.webp",
+            "sha256": "a511345dc6a4db4bd38540e5692af7853ad3da3b648aae6bf94c6f956fe3f9fb",
+            "bytes": 1700
+          },
+          {
+            "sourceName": "comment-add-03",
+            "sourceUrl": "https://hugeicons.com/icon/comment-add-03?style=stroke-rounded",
+            "previewUrl": "https://ico.hugeicons.com/comment-add-03-stroke-rounded@3x.webp",
+            "sha256": "3b58d136e6faebea38e7cbf379cea056f30e2429d017f8024f673016ae6b526a",
+            "bytes": 1288
+          }
+        ]
+      },
+      {
+        "exportName": "CommentBlock03Icon",
+        "status": "unverified-raster-difference",
+        "affectedSource": "comment block-03",
+        "reason": "The spaced and hyphenated source names have different free preview rasters. They show the same concept, but exact artwork equivalence is unverified.",
+        "previews": [
+          {
+            "sourceName": "comment block-03",
+            "sourceUrl": "https://hugeicons.com/icon/comment%20block-03?style=stroke-rounded",
+            "previewUrl": "https://ico.hugeicons.com/comment%20block-03-stroke-rounded@3x.webp",
+            "sha256": "70f7ffa6000d1da9d82cb922330c5f2bfa2e53617da1dd77c7d6794e6f7c0c69",
+            "bytes": 2020
+          },
+          {
+            "sourceName": "comment-block-03",
+            "sourceUrl": "https://hugeicons.com/icon/comment-block-03?style=stroke-rounded",
+            "previewUrl": "https://ico.hugeicons.com/comment-block-03-stroke-rounded@3x.webp",
+            "sha256": "358a72d93ff657d76ca8cd614a2b0691dba5c7ea53c2764c819c588266737071",
+            "bytes": 1640
+          }
+        ]
+      },
+      {
+        "exportName": "CommentRemove03Icon",
+        "status": "unverified-raster-difference",
+        "affectedSource": "comment remove-03",
+        "reason": "The spaced and hyphenated source names have different free preview rasters. They show the same concept, but exact artwork equivalence is unverified.",
+        "previews": [
+          {
+            "sourceName": "comment remove-03",
+            "sourceUrl": "https://hugeicons.com/icon/comment%20remove-03?style=stroke-rounded",
+            "previewUrl": "https://ico.hugeicons.com/comment%20remove-03-stroke-rounded@3x.webp",
+            "sha256": "238d54eb8397a717c7201fed50936f5bdfeba8aaafa6ffa0aae60b197c62387e",
+            "bytes": 1760
+          },
+          {
+            "sourceName": "comment-remove-03",
+            "sourceUrl": "https://hugeicons.com/icon/comment-remove-03?style=stroke-rounded",
+            "previewUrl": "https://ico.hugeicons.com/comment-remove-03-stroke-rounded@3x.webp",
+            "sha256": "6c6407675b408565337ffba7b3e2c593a209688ee126a948fca37d94e4e15f42",
+            "bytes": 1346
+          }
+        ]
+      },
+      {
+        "exportName": "CppIcon",
+        "status": "unverified-raster-difference",
+        "affectedSource": "c++ / cpp",
+        "reason": "The C++ and Cpp free preview rasters differ. The package collapses both names into one module; exact artwork equivalence is unverified.",
+        "previews": [
+          {
+            "sourceName": "c++",
+            "sourceUrl": "https://hugeicons.com/icon/c%2B%2B?style=stroke-rounded",
+            "previewUrl": "https://ico.hugeicons.com/c%2B%2B-stroke-rounded@3x.webp",
+            "sha256": "f1397c5ddb97ae1627e7144e2718ddde240cb05c480fcc90b50f93e6f99732ec",
+            "bytes": 1342
+          },
+          {
+            "sourceName": "cpp",
+            "sourceUrl": "https://hugeicons.com/icon/cpp?style=stroke-rounded",
+            "previewUrl": "https://ico.hugeicons.com/cpp-stroke-rounded@3x.webp",
+            "sha256": "bcdcaa0f37ab224e39387844b962dadc7a2030df665136a8ea0a687964285cee",
+            "bytes": 1674
+          }
+        ]
+      },
+      {
+        "exportName": "FingerPrintScanIcon",
+        "status": "confirmed-design-conflict",
+        "affectedSource": "fingerprint-scan",
+        "reason": "The free website fingerprint-scan preview uses different fingerprint ridges from finger-print-scan. The package aliases both exports to FingerPrintScanIcon.",
+        "previews": [
+          {
+            "sourceName": "finger-print-scan",
+            "sourceUrl": "https://hugeicons.com/icon/finger-print-scan?style=stroke-rounded",
+            "previewUrl": "https://ico.hugeicons.com/finger-print-scan-stroke-rounded@3x.webp",
+            "sha256": "03c984b1c51775a43d04492f1cde8dd772a75ccea4f47047c766ebb7adb3ca2e",
+            "bytes": 2322
+          },
+          {
+            "sourceName": "fingerprint-scan",
+            "sourceUrl": "https://hugeicons.com/icon/fingerprint-scan?style=stroke-rounded",
+            "previewUrl": "https://ico.hugeicons.com/fingerprint-scan-stroke-rounded@3x.webp",
+            "sha256": "c0beff590c4f38fd4ff1371e86028dcdfed57540779daef5ad6bf0bee8c35308",
+            "bytes": 1806
+          }
+        ]
+      },
+      {
+        "exportName": "FourSquareIcon",
+        "status": "confirmed-design-conflict",
+        "affectedSource": "foursquare",
+        "reason": "The free website foursquare preview is the Foursquare logo; four-square and the package module show a boxed numeral 4.",
+        "previews": [
+          {
+            "sourceName": "four-square",
+            "sourceUrl": "https://hugeicons.com/icon/four-square?style=stroke-rounded",
+            "previewUrl": "https://ico.hugeicons.com/four-square-stroke-rounded@3x.webp",
+            "sha256": "7b44a3d360951d2a1a9998abddc36e8b7d8c257aa457861b1fabacc17e720c1c",
+            "bytes": 1560
+          },
+          {
+            "sourceName": "foursquare",
+            "sourceUrl": "https://hugeicons.com/icon/foursquare?style=stroke-rounded",
+            "previewUrl": "https://ico.hugeicons.com/foursquare-stroke-rounded@3x.webp",
+            "sha256": "b4701334c7c6e4952e96ce1e38f7142d09fc8490ec8aa319f9e693c4ac50d45b",
+            "bytes": 1122
+          }
+        ]
+      },
+      {
+        "exportName": "FullScreenIcon",
+        "status": "confirmed-design-conflict",
+        "affectedSource": "fullscreen",
+        "reason": "The free website fullscreen preview uses different corner geometry from full-screen. The package aliases both exports to FullScreenIcon.",
+        "previews": [
+          {
+            "sourceName": "full-screen",
+            "sourceUrl": "https://hugeicons.com/icon/full-screen?style=stroke-rounded",
+            "previewUrl": "https://ico.hugeicons.com/full-screen-stroke-rounded@3x.webp",
+            "sha256": "b854d74d67f1c4d1946e8144bd6e394410a4261e0fbaf219d850d67dc7577757",
+            "bytes": 1048
+          },
+          {
+            "sourceName": "fullscreen",
+            "sourceUrl": "https://hugeicons.com/icon/fullscreen?style=stroke-rounded",
+            "previewUrl": "https://ico.hugeicons.com/fullscreen-stroke-rounded@3x.webp",
+            "sha256": "2207f66ee88a40eaf7785c8db7c4133a68e89389804bdd1d2999807e94bad312",
+            "bytes": 818
+          }
+        ]
+      },
+      {
+        "exportName": "ReIcon",
+        "status": "unverified-raster-difference",
+        "affectedSource": "re / re:",
+        "reason": "The Re and Re: free preview rasters differ. The package collapses both names into one module; exact artwork equivalence is unverified.",
+        "previews": [
+          {
+            "sourceName": "re",
+            "sourceUrl": "https://hugeicons.com/icon/re?style=stroke-rounded",
+            "previewUrl": "https://ico.hugeicons.com/re-stroke-rounded@3x.webp",
+            "sha256": "f6d358774df0f91b600fc51e2c3f9c1ae195023ebe1a46e90afa5f3ab56b69a1",
+            "bytes": 1760
+          },
+          {
+            "sourceName": "re:",
+            "sourceUrl": "https://hugeicons.com/icon/re%3A?style=stroke-rounded",
+            "previewUrl": "https://ico.hugeicons.com/re%3A-stroke-rounded@3x.webp",
+            "sha256": "fd7b19237ab450ba7c8a88cca40d7185bb7d7d7ce046f8615da7d34e773bca88",
+            "bytes": 1468
+          }
+        ]
+      },
+      {
+        "exportName": "RubiksCubeIcon",
+        "status": "identical-preview",
+        "affectedSource": null,
+        "reason": "Both free website preview responses have exactly the same SHA-256 and bytes.",
+        "previews": [
+          {
+            "sourceName": "rubik's-cube",
+            "sourceUrl": "https://hugeicons.com/icon/rubik's-cube?style=stroke-rounded",
+            "previewUrl": "https://ico.hugeicons.com/rubik's-cube-stroke-rounded@3x.webp",
+            "sha256": "dc3a12fec0dc6f27afb76c0db2641ee9873b352f58897f6fa34202e0d125041a",
+            "bytes": 1946
+          },
+          {
+            "sourceName": "rubiks-cube",
+            "sourceUrl": "https://hugeicons.com/icon/rubiks-cube?style=stroke-rounded",
+            "previewUrl": "https://ico.hugeicons.com/rubiks-cube-stroke-rounded@3x.webp",
+            "sha256": "dc3a12fec0dc6f27afb76c0db2641ee9873b352f58897f6fa34202e0d125041a",
+            "bytes": 1946
+          }
+        ]
+      },
+      {
+        "exportName": "TradeMarkIcon",
+        "status": "confirmed-design-conflict",
+        "affectedSource": "trademark",
+        "reason": "The free website trademark preview is an uncircled TM; trade-mark and the package module show a circled TM.",
+        "previews": [
+          {
+            "sourceName": "trade-mark",
+            "sourceUrl": "https://hugeicons.com/icon/trade-mark?style=stroke-rounded",
+            "previewUrl": "https://ico.hugeicons.com/trade-mark-stroke-rounded@3x.webp",
+            "sha256": "6d56b84e7dad94c5e3d0bda4d57199ef4a80863cfd4b92db3a04c585e74661b1",
+            "bytes": 2050
+          },
+          {
+            "sourceName": "trademark",
+            "sourceUrl": "https://hugeicons.com/icon/trademark?style=stroke-rounded",
+            "previewUrl": "https://ico.hugeicons.com/trademark-stroke-rounded@3x.webp",
+            "sha256": "026b40155a5353a83107b2ed4554b261d0af5f0f7a059ead6220c4f1733b0af9",
+            "bytes": 1782
+          }
+        ]
+      }
+    ]
+  },
+  "missingFromWebsite": [],
+  "unexpectedCategoryMismatches": [],
+  "categoryAliasDifferences": [
+    "Communications: 286 website entries map to 283 unique package icons (website aliases are deduplicated).",
+    "Editing: 601 website entries map to 600 unique package icons (website aliases are deduplicated).",
+    "Games: 172 website entries map to 171 unique package icons (website aliases are deduplicated).",
+    "Programming: 87 website entries map to 85 unique package icons (website aliases are deduplicated).",
+    "Security: 113 website entries map to 112 unique package icons (website aliases are deduplicated)."
+  ],
+  "aliases": [
+    {
+      "id": "comment-add-03",
+      "upstreamAliasReview": {
+        "exportName": "CommentAdd03Icon",
+        "status": "unverified-raster-difference",
+        "affectedSource": "comment add-03",
+        "reason": "The spaced and hyphenated source names have different free preview rasters. They show the same concept, but exact artwork equivalence is unverified.",
+        "previews": [
+          {
+            "sourceName": "comment add-03",
+            "sourceUrl": "https://hugeicons.com/icon/comment%20add-03?style=stroke-rounded",
+            "previewUrl": "https://ico.hugeicons.com/comment%20add-03-stroke-rounded@3x.webp",
+            "sha256": "a511345dc6a4db4bd38540e5692af7853ad3da3b648aae6bf94c6f956fe3f9fb",
+            "bytes": 1700
+          },
+          {
+            "sourceName": "comment-add-03",
+            "sourceUrl": "https://hugeicons.com/icon/comment-add-03?style=stroke-rounded",
+            "previewUrl": "https://ico.hugeicons.com/comment-add-03-stroke-rounded@3x.webp",
+            "sha256": "3b58d136e6faebea38e7cbf379cea056f30e2429d017f8024f673016ae6b526a",
+            "bytes": 1288
+          }
+        ]
+      },
+      "websitePrimaryName": "comment-add-03",
+      "exportName": "CommentAdd03Icon",
+      "packageAliases": [
+        "CommentAdd03FreeIcons",
+        "CommentAdd03Icon"
+      ],
+      "websiteAliases": [
+        {
+          "name": "comment add-03",
+          "category": "communications",
+          "sourceUrl": "https://hugeicons.com/icon/comment%20add-03?style=stroke-rounded",
+          "matchedBy": "canonical"
+        },
+        {
+          "name": "comment-add-03",
+          "category": "communications",
+          "sourceUrl": "https://hugeicons.com/icon/comment-add-03?style=stroke-rounded",
+          "matchedBy": "canonical"
+        }
+      ]
+    },
+    {
+      "id": "comment-block-03",
+      "upstreamAliasReview": {
+        "exportName": "CommentBlock03Icon",
+        "status": "unverified-raster-difference",
+        "affectedSource": "comment block-03",
+        "reason": "The spaced and hyphenated source names have different free preview rasters. They show the same concept, but exact artwork equivalence is unverified.",
+        "previews": [
+          {
+            "sourceName": "comment block-03",
+            "sourceUrl": "https://hugeicons.com/icon/comment%20block-03?style=stroke-rounded",
+            "previewUrl": "https://ico.hugeicons.com/comment%20block-03-stroke-rounded@3x.webp",
+            "sha256": "70f7ffa6000d1da9d82cb922330c5f2bfa2e53617da1dd77c7d6794e6f7c0c69",
+            "bytes": 2020
+          },
+          {
+            "sourceName": "comment-block-03",
+            "sourceUrl": "https://hugeicons.com/icon/comment-block-03?style=stroke-rounded",
+            "previewUrl": "https://ico.hugeicons.com/comment-block-03-stroke-rounded@3x.webp",
+            "sha256": "358a72d93ff657d76ca8cd614a2b0691dba5c7ea53c2764c819c588266737071",
+            "bytes": 1640
+          }
+        ]
+      },
+      "websitePrimaryName": "comment-block-03",
+      "exportName": "CommentBlock03Icon",
+      "packageAliases": [
+        "CommentBlock03FreeIcons",
+        "CommentBlock03Icon"
+      ],
+      "websiteAliases": [
+        {
+          "name": "comment block-03",
+          "category": "communications",
+          "sourceUrl": "https://hugeicons.com/icon/comment%20block-03?style=stroke-rounded",
+          "matchedBy": "canonical"
+        },
+        {
+          "name": "comment-block-03",
+          "category": "communications",
+          "sourceUrl": "https://hugeicons.com/icon/comment-block-03?style=stroke-rounded",
+          "matchedBy": "canonical"
+        }
+      ]
+    },
+    {
+      "id": "comment-remove-03",
+      "upstreamAliasReview": {
+        "exportName": "CommentRemove03Icon",
+        "status": "unverified-raster-difference",
+        "affectedSource": "comment remove-03",
+        "reason": "The spaced and hyphenated source names have different free preview rasters. They show the same concept, but exact artwork equivalence is unverified.",
+        "previews": [
+          {
+            "sourceName": "comment remove-03",
+            "sourceUrl": "https://hugeicons.com/icon/comment%20remove-03?style=stroke-rounded",
+            "previewUrl": "https://ico.hugeicons.com/comment%20remove-03-stroke-rounded@3x.webp",
+            "sha256": "238d54eb8397a717c7201fed50936f5bdfeba8aaafa6ffa0aae60b197c62387e",
+            "bytes": 1760
+          },
+          {
+            "sourceName": "comment-remove-03",
+            "sourceUrl": "https://hugeicons.com/icon/comment-remove-03?style=stroke-rounded",
+            "previewUrl": "https://ico.hugeicons.com/comment-remove-03-stroke-rounded@3x.webp",
+            "sha256": "6c6407675b408565337ffba7b3e2c593a209688ee126a948fca37d94e4e15f42",
+            "bytes": 1346
+          }
+        ]
+      },
+      "websitePrimaryName": "comment-remove-03",
+      "exportName": "CommentRemove03Icon",
+      "packageAliases": [
+        "CommentRemove03FreeIcons",
+        "CommentRemove03Icon"
+      ],
+      "websiteAliases": [
+        {
+          "name": "comment remove-03",
+          "category": "communications",
+          "sourceUrl": "https://hugeicons.com/icon/comment%20remove-03?style=stroke-rounded",
+          "matchedBy": "canonical"
+        },
+        {
+          "name": "comment-remove-03",
+          "category": "communications",
+          "sourceUrl": "https://hugeicons.com/icon/comment-remove-03?style=stroke-rounded",
+          "matchedBy": "canonical"
+        }
+      ]
+    },
+    {
+      "id": "cpp",
+      "upstreamAliasReview": {
+        "exportName": "CppIcon",
+        "status": "unverified-raster-difference",
+        "affectedSource": "c++ / cpp",
+        "reason": "The C++ and Cpp free preview rasters differ. The package collapses both names into one module; exact artwork equivalence is unverified.",
+        "previews": [
+          {
+            "sourceName": "c++",
+            "sourceUrl": "https://hugeicons.com/icon/c%2B%2B?style=stroke-rounded",
+            "previewUrl": "https://ico.hugeicons.com/c%2B%2B-stroke-rounded@3x.webp",
+            "sha256": "f1397c5ddb97ae1627e7144e2718ddde240cb05c480fcc90b50f93e6f99732ec",
+            "bytes": 1342
+          },
+          {
+            "sourceName": "cpp",
+            "sourceUrl": "https://hugeicons.com/icon/cpp?style=stroke-rounded",
+            "previewUrl": "https://ico.hugeicons.com/cpp-stroke-rounded@3x.webp",
+            "sha256": "bcdcaa0f37ab224e39387844b962dadc7a2030df665136a8ea0a687964285cee",
+            "bytes": 1674
+          }
+        ]
+      },
+      "websitePrimaryName": "cpp",
+      "exportName": "CppIcon",
+      "packageAliases": [
+        "CFreeIcons",
+        "CIcon",
+        "CppFreeIcons",
+        "CppIcon"
+      ],
+      "websiteAliases": [
+        {
+          "name": "c++",
+          "category": "programming",
+          "sourceUrl": "https://hugeicons.com/icon/c%2B%2B?style=stroke-rounded",
+          "matchedBy": "explicit-numeric-name"
+        },
+        {
+          "name": "cpp",
+          "category": "programming",
+          "sourceUrl": "https://hugeicons.com/icon/cpp?style=stroke-rounded",
+          "matchedBy": "canonical"
+        }
+      ]
+    },
+    {
+      "id": "finger-print-scan",
+      "upstreamAliasReview": {
+        "exportName": "FingerPrintScanIcon",
+        "status": "confirmed-design-conflict",
+        "affectedSource": "fingerprint-scan",
+        "reason": "The free website fingerprint-scan preview uses different fingerprint ridges from finger-print-scan. The package aliases both exports to FingerPrintScanIcon.",
+        "previews": [
+          {
+            "sourceName": "finger-print-scan",
+            "sourceUrl": "https://hugeicons.com/icon/finger-print-scan?style=stroke-rounded",
+            "previewUrl": "https://ico.hugeicons.com/finger-print-scan-stroke-rounded@3x.webp",
+            "sha256": "03c984b1c51775a43d04492f1cde8dd772a75ccea4f47047c766ebb7adb3ca2e",
+            "bytes": 2322
+          },
+          {
+            "sourceName": "fingerprint-scan",
+            "sourceUrl": "https://hugeicons.com/icon/fingerprint-scan?style=stroke-rounded",
+            "previewUrl": "https://ico.hugeicons.com/fingerprint-scan-stroke-rounded@3x.webp",
+            "sha256": "c0beff590c4f38fd4ff1371e86028dcdfed57540779daef5ad6bf0bee8c35308",
+            "bytes": 1806
+          }
+        ]
+      },
+      "websitePrimaryName": "finger-print-scan",
+      "exportName": "FingerPrintScanIcon",
+      "packageAliases": [
+        "FingerPrintScanFreeIcons",
+        "FingerPrintScanIcon",
+        "FingerprintScanFreeIcons",
+        "FingerprintScanIcon"
+      ],
+      "websiteAliases": [
+        {
+          "name": "finger-print-scan",
+          "category": "security",
+          "sourceUrl": "https://hugeicons.com/icon/finger-print-scan?style=stroke-rounded",
+          "matchedBy": "canonical"
+        },
+        {
+          "name": "fingerprint-scan",
+          "category": "security",
+          "sourceUrl": "https://hugeicons.com/icon/fingerprint-scan?style=stroke-rounded",
+          "matchedBy": "canonical"
+        }
+      ]
+    },
+    {
+      "id": "four-square",
+      "upstreamAliasReview": {
+        "exportName": "FourSquareIcon",
+        "status": "confirmed-design-conflict",
+        "affectedSource": "foursquare",
+        "reason": "The free website foursquare preview is the Foursquare logo; four-square and the package module show a boxed numeral 4.",
+        "previews": [
+          {
+            "sourceName": "four-square",
+            "sourceUrl": "https://hugeicons.com/icon/four-square?style=stroke-rounded",
+            "previewUrl": "https://ico.hugeicons.com/four-square-stroke-rounded@3x.webp",
+            "sha256": "7b44a3d360951d2a1a9998abddc36e8b7d8c257aa457861b1fabacc17e720c1c",
+            "bytes": 1560
+          },
+          {
+            "sourceName": "foursquare",
+            "sourceUrl": "https://hugeicons.com/icon/foursquare?style=stroke-rounded",
+            "previewUrl": "https://ico.hugeicons.com/foursquare-stroke-rounded@3x.webp",
+            "sha256": "b4701334c7c6e4952e96ce1e38f7142d09fc8490ec8aa319f9e693c4ac50d45b",
+            "bytes": 1122
+          }
+        ]
+      },
+      "websitePrimaryName": "four-square",
+      "exportName": "FourSquareIcon",
+      "packageAliases": [
+        "FourSquareFreeIcons",
+        "FourSquareIcon",
+        "FoursquareFreeIcons",
+        "FoursquareIcon"
+      ],
+      "websiteAliases": [
+        {
+          "name": "four-square",
+          "category": "editing",
+          "sourceUrl": "https://hugeicons.com/icon/four-square?style=stroke-rounded",
+          "matchedBy": "canonical"
+        },
+        {
+          "name": "foursquare",
+          "category": "logos",
+          "sourceUrl": "https://hugeicons.com/icon/foursquare?style=stroke-rounded",
+          "matchedBy": "canonical"
+        }
+      ]
+    },
+    {
+      "id": "full-screen",
+      "upstreamAliasReview": {
+        "exportName": "FullScreenIcon",
+        "status": "confirmed-design-conflict",
+        "affectedSource": "fullscreen",
+        "reason": "The free website fullscreen preview uses different corner geometry from full-screen. The package aliases both exports to FullScreenIcon.",
+        "previews": [
+          {
+            "sourceName": "full-screen",
+            "sourceUrl": "https://hugeicons.com/icon/full-screen?style=stroke-rounded",
+            "previewUrl": "https://ico.hugeicons.com/full-screen-stroke-rounded@3x.webp",
+            "sha256": "b854d74d67f1c4d1946e8144bd6e394410a4261e0fbaf219d850d67dc7577757",
+            "bytes": 1048
+          },
+          {
+            "sourceName": "fullscreen",
+            "sourceUrl": "https://hugeicons.com/icon/fullscreen?style=stroke-rounded",
+            "previewUrl": "https://ico.hugeicons.com/fullscreen-stroke-rounded@3x.webp",
+            "sha256": "2207f66ee88a40eaf7785c8db7c4133a68e89389804bdd1d2999807e94bad312",
+            "bytes": 818
+          }
+        ]
+      },
+      "websitePrimaryName": "full-screen",
+      "exportName": "FullScreenIcon",
+      "packageAliases": [
+        "FullScreenFreeIcons",
+        "FullScreenIcon",
+        "Fullscreen",
+        "FullscreenFreeIcons",
+        "FullscreenIcon"
+      ],
+      "websiteAliases": [
+        {
+          "name": "full-screen",
+          "category": "editing",
+          "sourceUrl": "https://hugeicons.com/icon/full-screen?style=stroke-rounded",
+          "matchedBy": "canonical"
+        },
+        {
+          "name": "fullscreen",
+          "category": "editing",
+          "sourceUrl": "https://hugeicons.com/icon/fullscreen?style=stroke-rounded",
+          "matchedBy": "canonical"
+        }
+      ]
+    },
+    {
+      "id": "re",
+      "upstreamAliasReview": {
+        "exportName": "ReIcon",
+        "status": "unverified-raster-difference",
+        "affectedSource": "re / re:",
+        "reason": "The Re and Re: free preview rasters differ. The package collapses both names into one module; exact artwork equivalence is unverified.",
+        "previews": [
+          {
+            "sourceName": "re",
+            "sourceUrl": "https://hugeicons.com/icon/re?style=stroke-rounded",
+            "previewUrl": "https://ico.hugeicons.com/re-stroke-rounded@3x.webp",
+            "sha256": "f6d358774df0f91b600fc51e2c3f9c1ae195023ebe1a46e90afa5f3ab56b69a1",
+            "bytes": 1760
+          },
+          {
+            "sourceName": "re:",
+            "sourceUrl": "https://hugeicons.com/icon/re%3A?style=stroke-rounded",
+            "previewUrl": "https://ico.hugeicons.com/re%3A-stroke-rounded@3x.webp",
+            "sha256": "fd7b19237ab450ba7c8a88cca40d7185bb7d7d7ce046f8615da7d34e773bca88",
+            "bytes": 1468
+          }
+        ]
+      },
+      "websitePrimaryName": "re",
+      "exportName": "ReIcon",
+      "packageAliases": [
+        "ReFreeIcons",
+        "ReIcon"
+      ],
+      "websiteAliases": [
+        {
+          "name": "re",
+          "category": "programming",
+          "sourceUrl": "https://hugeicons.com/icon/re?style=stroke-rounded",
+          "matchedBy": "canonical"
+        },
+        {
+          "name": "re:",
+          "category": "programming",
+          "sourceUrl": "https://hugeicons.com/icon/re%3A?style=stroke-rounded",
+          "matchedBy": "canonical"
+        }
+      ]
+    },
+    {
+      "id": "rubiks-cube",
+      "upstreamAliasReview": {
+        "exportName": "RubiksCubeIcon",
+        "status": "identical-preview",
+        "affectedSource": null,
+        "reason": "Both free website preview responses have exactly the same SHA-256 and bytes.",
+        "previews": [
+          {
+            "sourceName": "rubik's-cube",
+            "sourceUrl": "https://hugeicons.com/icon/rubik's-cube?style=stroke-rounded",
+            "previewUrl": "https://ico.hugeicons.com/rubik's-cube-stroke-rounded@3x.webp",
+            "sha256": "dc3a12fec0dc6f27afb76c0db2641ee9873b352f58897f6fa34202e0d125041a",
+            "bytes": 1946
+          },
+          {
+            "sourceName": "rubiks-cube",
+            "sourceUrl": "https://hugeicons.com/icon/rubiks-cube?style=stroke-rounded",
+            "previewUrl": "https://ico.hugeicons.com/rubiks-cube-stroke-rounded@3x.webp",
+            "sha256": "dc3a12fec0dc6f27afb76c0db2641ee9873b352f58897f6fa34202e0d125041a",
+            "bytes": 1946
+          }
+        ]
+      },
+      "websitePrimaryName": "rubiks-cube",
+      "exportName": "RubiksCubeIcon",
+      "packageAliases": [
+        "RubiksCubeFreeIcons",
+        "RubiksCubeIcon"
+      ],
+      "websiteAliases": [
+        {
+          "name": "rubik's-cube",
+          "category": "games",
+          "sourceUrl": "https://hugeicons.com/icon/rubik's-cube?style=stroke-rounded",
+          "matchedBy": "canonical"
+        },
+        {
+          "name": "rubiks-cube",
+          "category": "games",
+          "sourceUrl": "https://hugeicons.com/icon/rubiks-cube?style=stroke-rounded",
+          "matchedBy": "canonical"
+        }
+      ]
+    },
+    {
+      "id": "trade-mark",
+      "upstreamAliasReview": {
+        "exportName": "TradeMarkIcon",
+        "status": "confirmed-design-conflict",
+        "affectedSource": "trademark",
+        "reason": "The free website trademark preview is an uncircled TM; trade-mark and the package module show a circled TM.",
+        "previews": [
+          {
+            "sourceName": "trade-mark",
+            "sourceUrl": "https://hugeicons.com/icon/trade-mark?style=stroke-rounded",
+            "previewUrl": "https://ico.hugeicons.com/trade-mark-stroke-rounded@3x.webp",
+            "sha256": "6d56b84e7dad94c5e3d0bda4d57199ef4a80863cfd4b92db3a04c585e74661b1",
+            "bytes": 2050
+          },
+          {
+            "sourceName": "trademark",
+            "sourceUrl": "https://hugeicons.com/icon/trademark?style=stroke-rounded",
+            "previewUrl": "https://ico.hugeicons.com/trademark-stroke-rounded@3x.webp",
+            "sha256": "026b40155a5353a83107b2ed4554b261d0af5f0f7a059ead6220c4f1733b0af9",
+            "bytes": 1782
+          }
+        ]
+      },
+      "websitePrimaryName": "trade-mark",
+      "exportName": "TradeMarkIcon",
+      "packageAliases": [
+        "TradeMarkFreeIcons",
+        "TradeMarkIcon",
+        "TrademarkFreeIcons",
+        "TrademarkIcon"
+      ],
+      "websiteAliases": [
+        {
+          "name": "trade-mark",
+          "category": "legal",
+          "sourceUrl": "https://hugeicons.com/icon/trade-mark?style=stroke-rounded",
+          "matchedBy": "canonical"
+        },
+        {
+          "name": "trademark",
+          "category": "business",
+          "sourceUrl": "https://hugeicons.com/icon/trademark?style=stroke-rounded",
+          "matchedBy": "canonical"
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "All artwork comes from the installed MIT-licensed @hugeicons/core-free-icons package; no Pro artwork is included.",
+    "Website metadata is taken from all public stroke-rounded catalogue pages. Source category labels, ordering, and entry counts are preserved.",
+    "Ten website entries collapse onto another canonical package module. One preview pair is byte-identical; four pairs have confirmed design conflicts; five pairs have different rasters with unverified artwork equivalence. Package aliases do not prove website artwork identity.",
+    "Category actual counts describe unique exported icons. Website expected counts include aliases; five categories have explained count differences.",
+    "The official package aliases four-square/foursquare and trade-mark/trademark across two source categories despite distinct free website designs. Both source category memberships are retained as metadata; the missing website designs are explicitly reported.",
+    "SVG exports preserve official node attributes and React render order, including mixed filled/stroked shapes and opacity. No geometry is traced from website previews."
+  ],
+  "verification": {
+    "status": "passed",
+    "verifiedAt": "2026-10-07T17:07:11.189Z",
+    "packageVersion": "4.3.5",
+    "websiteEntries": 6035,
+    "canonicalSvgFiles": 6025,
+    "categories": 59,
+    "verifiedSvgNodes": 20354,
+    "websiteAliases": 10,
+    "missingPackageExports": 0,
+    "confirmedWebsiteDesignConflicts": 4,
+    "unverifiedWebsitePreviewDifferences": 5,
+    "unexpectedCategoryMismatches": 0,
+    "explainedCategoryCountDifferences": 5,
+    "zipSha256": "cabfacc4f64e81f5aa9bf73f2d85069677f66cc6876599aeb8163d53545351f2",
+    "liveWebsiteChecked": true
+  }
+}

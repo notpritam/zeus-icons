@@ -1,0 +1,5 @@
+<!-- Generated image trace; not the original Hugeicons Pro SVG.
+Source: https://hugeicons.com/icon/3-d-view?style=solid-sharp
+Reference artwork: Hugeicons. Not covered by the application's MIT license.
+Algorithm: geometry-first-v2; method: shape-model; source 96x96; alpha overlap 96.999%. -->
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="currentColor" opacity="1"><path fill-rule="evenodd" d="M1.5 1.5L1.5 9L3.5 9L3.5 3.5L9 3.5L9 1.5L1.5 1.5ZM22.5 1.5L15 1.5L15 3.5L20.5 3.5L20.5 9L22.5 9L22.5 1.5ZM1.5 22.5L9 22.5L9 20.5L3.5 20.5L3.5 15L1.5 15L1.5 22.5ZM22.5 15L22.5 22.5L15 22.5L15 20.5L20.5 20.5L20.5 15L22.5 15Z"/></g><g fill="currentColor" opacity="1"><path fill-rule="nonzero" d="M7.25 8.125L12 5.75L16.75 8.125L12 10.5L7.25 8.125ZM6.25 9.75L11.25 12.25L11.25 18L6.25 15.5L6.25 9.75ZM17.75 9.75L12.75 12.25L12.75 18L17.75 15.5L17.75 9.75Z"/></g></svg>

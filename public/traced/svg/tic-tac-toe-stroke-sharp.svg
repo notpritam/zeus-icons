@@ -1,0 +1,5 @@
+<!-- Generated image trace; not the original Hugeicons Pro SVG.
+Source: https://hugeicons.com/icon/tic-tac-toe?style=stroke-sharp
+Reference artwork: Hugeicons. Not covered by the application's MIT license.
+Algorithm: geometry-first-v4; method: matched-centrelines; source 512x512; alpha overlap 99.955%. -->
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="currentColor" opacity="1"><path fill-rule="nonzero" d="M11.25 2H12.75V22H11.25Z"/></g><g fill="currentColor" opacity="1"><path fill-rule="nonzero" d="M2 11.25H22V12.75H2Z"/></g><g fill="currentColor" opacity="1"><path fill-rule="nonzero" d="M8.75 18.5A3.25 3.25 0 1 1 2.25 18.5A3.25 3.25 0 1 1 8.75 18.5ZM7.25 18.5A1.75 1.75 0 1 0 3.75 18.5A1.75 1.75 0 1 0 7.25 18.5Z"/></g><g fill="currentColor" opacity="1"><path fill-rule="nonzero" d="M16.530331 2.4696698L21.530331 7.4696698L20.469669 8.5303297L15.46967 3.5303302L16.530331 2.4696698ZM21.530331 3.5303302L16.530331 8.5303297L15.46967 7.4696698L20.469669 2.4696698L21.530331 3.5303302Z"/></g></svg>
